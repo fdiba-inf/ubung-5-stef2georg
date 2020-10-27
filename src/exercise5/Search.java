@@ -19,9 +19,14 @@ public class Search {
         System.out.print("Search for number: ");
         int number = input.nextInt();
 
-        int index = -1;
-        // Search for number in numbers
+        int numberIndex = -1;
+        for (int index = 0; index < numbers.length; index++) {
+            if (number == numbers[index]) {
+                numberIndex = index;
+                break;
+            }
+        }
 
-        System.out.println("Number index: " + index);
+        System.out.println("Number index: " + numberIndex);
     }
 }
